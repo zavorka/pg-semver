@@ -1,0 +1,2 @@
+version=3
+https://github.com/zavorka/pg-semver/releases .*/archive/(.*).tar.gz

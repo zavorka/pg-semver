@@ -1,0 +1,23 @@
+Source: pg-semver
+Section: database
+Priority: optional
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Uploaders: Roman Beranek <roman.beranek@prusa3d.cz>
+Build-Depends:
+ debhelper (>= 9),
+ postgresql-server-dev-all (>= 153~)
+Standards-Version: 4.4.1
+Homepage: https://gitlab.com/prusa3d/distro/pg-semver
+Vcs-Browser: https://gitlab.com/prusa3d/distro/pg-semver
+Vcs-Git: https://gitlab.com/prusa3d/distro/pg-semver.git
+
+Package: postgresql-pg-semver
+Architecture: any
+Depends: ${postgresql:Depends},
+         ${misc:Depends},
+         ${shlibs:Depends}
+Provides: ${postgresql:Provides}
+Description: Semantic version data type
+ This library contains a single PostgreSQL extension, a data type called
+ "semver". It's an implementation of the version number format specified
+ by the Semantic Versioning 2.0.0 Specification.
