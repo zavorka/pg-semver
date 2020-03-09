@@ -1,0 +1,31 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+SRCDIR=$(CURDIR)
+export USE_PGXS=1
+
+MODULE_NAME=pg-semver
+PG_DEPENDS=$(shell pg_buildext supported-versions | tac | sed s/^/postgresql-/)
+PG_PROVIDES=$(shell pg_buildext supported-versions | tac | sed "s/^\(.*\)/postgresql-\1-$(MODULE_NAME)/")
+
+override_dh_auto_build:
+	+pg_buildext build $(SRCDIR) build-%v "$(CFLAGS)"
+	$(MAKE) -C doc JADE=openjade USE_PGXS=1
+
+override_dh_auto_clean:
+	+pg_buildext clean $(SRCDIR) build-%v
+	rm -rf results/
+	$(MAKE) -C doc clean USE_PGXS=1
+
+override_dh_auto_install:
+	+pg_buildext install $(SRCDIR) build-%v postgresql-$(MODULE_NAME)
+	# remove duplicate files from unwanted location
+	rm -rfv debian/postgresql-pg-semver/usr/share/doc/postgresql-doc-*
+
+override_dh_shlibdeps:
+	dh_shlibdeps
+	echo "postgresql:Depends=$(PG_DEPENDS)" | sed s/\ /\|/g >> debian/postgresql-$(MODULE_NAME).substvars
+	echo "postgresql:Provides=$(PG_PROVIDES)" | sed s/\ /,/g >> debian/postgresql-$(MODULE_NAME).substvars
+
+%:
+	dh $@
