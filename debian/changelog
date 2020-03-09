@@ -1,11 +1,11 @@
-postgresql-semver (0.21.0-1) unstable; urgency=medium
+pg-semver (0.21.0-1) unstable; urgency=medium
 
   * Fixed test failure on Postgres 11 due to a renamed column that this
     extension doesn't even use for testing.
 
  -- David E. Wheeler <david@justatheory.com>  Sat, 10 Nov 2018 19:32:26 +0100
 
-postgresql-semver (0.20.2-1) unstable; urgency=medium  
+pg-semver (0.20.2-1) unstable; urgency=medium  
 
   * Fix Makefile bug that installed the version script with the release
     version instead of the extension version. Thanks again to
@@ -13,14 +13,14 @@ postgresql-semver (0.20.2-1) unstable; urgency=medium
 
  -- David E. Wheeler <david@justatheory.com>  Fri, 19 Oct 2018 02:05:11 +0200
 
-postgresql-semver (0.20.1-1) unstable; urgency=medium  
+pg-semver (0.20.1-1) unstable; urgency=medium  
 
   * Properly incremented version to v0.20.0 in the spec file and docs.
     Thanks to @ninjaslikecheese for the report (#32).
 
  -- David E. Wheeler <david@justatheory.com>  Thu, 18 Oct 2018 00:30:04 +0200
 
-postgresql-semver (0.20.0-1) unstable; urgency=medium  
+pg-semver (0.20.0-1) unstable; urgency=medium  
 
   * Fixed file name in the v0.17.0 upgrade script.
   * Added the semverrange type.
@@ -31,21 +31,21 @@ postgresql-semver (0.20.0-1) unstable; urgency=medium
 
  -- David E. Wheeler <david@justatheory.com>  Wed, 17 Oct 2018 12:59:22 +0200
 
-postgresql-semver (0.17.0-1) unstable; urgency=medium  
+pg-semver (0.17.0-1) unstable; urgency=medium  
 
   * Fixed potential memory leak in is_semver function. Thanks to
     Arun Tejasvi Chaganty (Issue #29).
 
  -- David E. Wheeler <david@justatheory.com>  Sun, 07 May 2017 07:15:25 +0200
 
-postgresql-semver (0.16.0-1) unstable; urgency=medium  
+pg-semver (0.16.0-1) unstable; urgency=medium  
 
   * Added `get_semver_*` accessor functions to retrieve the individual
     parts of a semver, thanks to Geoff Montee (PR #27).
 
  -- David E. Wheeler <david@justatheory.com>  Sun, 04 Dec 2016 00:51:19 +0100
 
-postgresql-semver (0.15.0-1) unstable; urgency=medium  
+pg-semver (0.15.0-1) unstable; urgency=medium  
 
   * Fixed incorrect parsing of semver build metadata.
   * Fixed text foratting of build metadata-only semver values.
@@ -55,7 +55,7 @@ postgresql-semver (0.15.0-1) unstable; urgency=medium
 
  -- David E. Wheeler <david@justatheory.com>  Fri, 28 Oct 2016 03:38:59 +0200
 
-postgresql-semver (0.14.0-1) unstable; urgency=medium  
+pg-semver (0.14.0-1) unstable; urgency=medium  
 
   * Updated the extension version in `semver.control` to 0.13.0, which
     evidently I forgot to do for that release. Thanks to Stanislav Lorenc
@@ -63,7 +63,7 @@ postgresql-semver (0.14.0-1) unstable; urgency=medium
 
  -- David E. Wheeler <david@justatheory.com>  Thu, 11 Aug 2016 05:38:27 +0200
 
-postgresql-semver (0.13.0-1) unstable; urgency=medium  
+pg-semver (0.13.0-1) unstable; urgency=medium  
 
   * Fixed bug where a dash (-) was disallowed within the metadata part of
     a semver. Thanks to @TerraTech for the report (Issue #19) and Tom
@@ -71,7 +71,7 @@ postgresql-semver (0.13.0-1) unstable; urgency=medium
 
  -- David E. Wheeler <david@justatheory.com>  Sat, 30 Jul 2016 21:06:15 +0200
 
-postgresql-semver (0.12.0-1) unstable; urgency=medium  
+pg-semver (0.12.0-1) unstable; urgency=medium  
 
   * Fixed bug where some items described in the SemVer 2.0.0 Spec, section
     10, were not properly recognized as semvers. Thanks to Xavier Caron
@@ -79,7 +79,7 @@ postgresql-semver (0.12.0-1) unstable; urgency=medium
 
  -- David E. Wheeler <david@justatheory.com>  Sat, 11 Jun 2016 06:00:19 +0200
 
-postgresql-semver (0.11.0-1) unstable; urgency=medium  
+pg-semver (0.11.0-1) unstable; urgency=medium  
 
   * Added `is_semver()`, thanks to a pull request from Xavier Caron
     (PR #14).
@@ -89,7 +89,7 @@ postgresql-semver (0.11.0-1) unstable; urgency=medium
 
  -- David E. Wheeler <david@justatheory.com>  Mon, 23 May 2016 20:29:49 +0200
 
-postgresql-semver (0.10.0-1) unstable; urgency=medium  
+pg-semver (0.10.0-1) unstable; urgency=medium  
 
   * Updated extension to support Semantic Versioning 2.0.0, thanks to Tom
     Davis (PR #13).
@@ -103,7 +103,7 @@ postgresql-semver (0.10.0-1) unstable; urgency=medium
 
  -- David E. Wheeler <david@justatheory.com>  Thu, 12 May 2016 00:28:03 +0200
 
-postgresql-semver (0.5.0-1) unstable; urgency=medium   
+pg-semver (0.5.0-1) unstable; urgency=medium   
 
   * Fixed issue where the release file could be listed twice when
     installing, which causes an installation failure on some versions of
@@ -119,7 +119,7 @@ postgresql-semver (0.5.0-1) unstable; urgency=medium
 
  -- David E. Wheeler <david@justatheory.com>  Sat, 06 Dec 2014 00:29:17 +0100
 
-postgresql-semver (0.4.0-1) unstable; urgency=medium  
+pg-semver (0.4.0-1) unstable; urgency=medium  
 
   * Updated the `Makefile` to reflect the recommended patterns from
     pgsql-hackers. Thanks to Cédric Villemain for the details.
@@ -138,7 +138,7 @@ postgresql-semver (0.4.0-1) unstable; urgency=medium
 
  -- David E. Wheeler <david@justatheory.com>  Wed, 12 Jun 2013 06:48:33 +0200
 
-postgresql-semver (0.3.0-1) unstable; urgency=medium  
+pg-semver (0.3.0-1) unstable; urgency=medium  
 
   * Updated the parser to support an optional dash before the prerelease
     version, and the formatter to always emit a dash for the prerelease
@@ -147,7 +147,7 @@ postgresql-semver (0.3.0-1) unstable; urgency=medium
 
  -- David E. Wheeler <david@justatheory.com>  Tue, 20 Nov 2012 19:04:30 +0100
 
-postgresql-semver (0.2.4-1) unstable; urgency=medium  
+pg-semver (0.2.4-1) unstable; urgency=medium  
 
   * Fixed a memory allocation bug that could cause semvers to be displayed
     with missing or garbage characters. Thanks to Andrew "RhodiumToad"
@@ -155,14 +155,14 @@ postgresql-semver (0.2.4-1) unstable; urgency=medium
 
  -- David E. Wheeler <david@justatheory.com>  Fri, 02 Nov 2012 22:32:30 +0100
 
-postgresql-semver (0.2.3-1) unstable; urgency=medium 
+pg-semver (0.2.3-1) unstable; urgency=medium 
 
   * Fixed the `Makefile` so that the documentation file should properly be
     found and installed by `PGXS`.
 
  -- David E. Wheeler <david@justatheory.com>  Fri, 11 Nov 2011 06:55:10 +0100
 
-postgresql-semver (0.2.2-1) unstable; urgency=medium   
+pg-semver (0.2.2-1) unstable; urgency=medium   
 
   * Tweaked MultiMarkdown table layout in the docuemntation so that the
     header row is always processed as a header row, rather than a `pre`
@@ -171,7 +171,7 @@ postgresql-semver (0.2.2-1) unstable; urgency=medium
 
  -- David E. Wheeler <david@justatheory.com>  Thu, 12 May 2011 19:01:41 +0200
 
-postgresql-semver (0.2.1-1) unstable; urgency=medium 
+pg-semver (0.2.1-1) unstable; urgency=medium 
 
   * Fixed the metadata file to reflect that the "pair" extension is not
     included in the semver distribution.
@@ -191,7 +191,7 @@ postgresql-semver (0.2.1-1) unstable; urgency=medium
 
  -- David E. Wheeler <david@justatheory.com>  Wed, 20 Apr 2011 20:37:05 +0200
 
-postgresql-semver (0.2.0-1) unstable; urgency=medium 
+pg-semver (0.2.0-1) unstable; urgency=medium 
 
   * Converted to a native type implemented in C by Sam Vilain. While David
     was at lunch, no less.
@@ -202,7 +202,7 @@ postgresql-semver (0.2.0-1) unstable; urgency=medium
 
  -- David E. Wheeler <david@justatheory.com>  Sat, 05 Feb 2011 19:32:49 +0100
 
-postgresql-semver (0.1.0-1) unstable; urgency=medium
+pg-semver (0.1.0-1) unstable; urgency=medium
 
   * Initial version.
   * Implementation in pure PL/pgSQL.
