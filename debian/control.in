@@ -16,3 +16,4 @@ Description: Semantic version data type
  This library contains a single PostgreSQL extension, a data type called
  "semver". It's an implementation of the version number format specified
  by the Semantic Versioning 2.0.0 Specification.
+
