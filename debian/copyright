@@ -3,7 +3,7 @@ Upstream-Name: pg-semver
 Source: https://gitlab.com/prusa3d/distro/pg-semver
 
 Files: *
-Copyright: 2010-2018 The pg-semver Maintainers: David E. Wheeler, Sam Vilain, Tom Davis, and Xavier Caron.
+Copyright: 2010-2020 The pg-semver Maintainers: David E. Wheeler, Sam Vilain, Tom Davis, and Xavier Caron.
 License: PostgreSQL
 
 License: PostgreSQL
