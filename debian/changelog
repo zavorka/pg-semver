@@ -1,4 +1,69 @@
+pg-semver (0.30.0-1) unstable; urgency=medium
+
+  * ***** WARNING: This release breaks compatibility with previous versions! ******
+    Previous versions of the semver extension incorrectly allowed some
+    invalid prerelease and build metadata values. Details below, but *BEFORE
+    YOU UPGRADE* we strongly recommend that you check for and repair any
+    invalid semvers. You can find them using the official [SemVer regular
+    expression](https://regex101.com/r/vkijKf/1/) like so:
+
+    SELECT name, version FROM packages
+     WHERE version::text !~ '^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)'
+                            '(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)'
+                            '(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?'
+                            '(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$';
+
+    If no rows are returned, you should be good to go. If there are results,
+    here are Examples of invalid semantic versions and how they should be
+    repaired.
+
+        1.0.0-02799   ->   1.0.0-2799
+        1.0.0-0.02    ->   1.0.0-0.2
+        1.0.0-.20     ->   1.0.0-0.20
+        1.0.0+0+20    ->   1.0.0+0-20  or  1.0.0+0.20
+        1.0.0+.af     ->   1.0.0+0.af  or  1.0.0+af
+
+    And now, back to your regularly-scheduled changes.
+
+  * Fixed an error formatting prerelease parts for semvers longer than
+    32 bytes. Thanks to @Nemo157 for the report and suggested fix (#48).
+  * Removed code that converted dashes to dots in prerelease parts. It
+    had been doing so on the assumption that dashes were invalid in SemVer
+    1.0 and 2.0 prerelease parts, but that does not turn out to be the case.
+    Thanks to @Nemo157 for the report (#46).
+  * Fixed the parsing of prerelease and metadata parts to allow leading
+    zeros for parts with non-numeric characters, e.g., `1.0.0-alpha.0a`, and
+    to disallow parts with leading zeros and only numeric characters, e.g.,
+    `1.0.0-02799`. Thanks to @Nemo157 for the bug report, and to Joseph
+    Donahue for the SemVer spec expertise (#45).
+  * The metadata part may no longer contain plus signs other than the one
+    used to start the metadata part.
+  * The prerelease and metadata parts may no longer start with a dot.
+
+ -- David E. Wheeler <david@justatheory.com>  Tue, 16 May 2020 19:28:36 +0000
+
+pg-semver (0.22.0-1) unstable; urgency=medium
+
+  * Fixed `get_semver_prerelease()` so that it returns only the
+    prerelease without any build metadata. For example, for
+    `1.0.0-1.2+1.02`, it will now return `1.2`, not `1.2+1.02`. Thanks
+    to Artur Troian for the report (#41) and fix (#42)!
+
+ -- David E. Wheeler <david@justatheory.com>  Thu, 2 Apr 2020 14:13:55 +0000
+
 pg-semver (0.21.0-1) unstable; urgency=medium
+
+  * Fixed build metadata part to allow leading zeros. In other words,
+    `1.0.0-1.02` is not a legitimate semver, because it has a leading zero
+    in a numeric part of the prerelease version. `1.0.0-1.2+1.02`, however,
+    is valid, because the leading zero numeric expression is in the build
+    metadata part, which does not evaluate as numeric, and so is allowed.
+    This fix allows source code hashes, for example, to be used in build
+    metadata. Thanks to Artur Troian for the report (#38) and fix (#39)!
+
+ -- David E. Wheeler <david@justatheory.com>  Sat, 21 Mar 2020 21:56:20 +0000
+
+pg-semver (0.20.3-1) unstable; urgency=medium
 
   * Fixed test failure on Postgres 11 due to a renamed column that this
     extension doesn't even use for testing.
