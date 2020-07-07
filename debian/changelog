@@ -3,7 +3,7 @@ pg-semver (0.21.0-1) unstable; urgency=medium
   * Fixed test failure on Postgres 11 due to a renamed column that this
     extension doesn't even use for testing.
 
- -- David E. Wheeler <david@justatheory.com>  Sat, 10 Nov 2018 19:32:26 +0100
+ -- David E. Wheeler <david@justatheory.com>  Sat, 10 Nov 2018 19:32:26 +0000
 
 pg-semver (0.20.2-1) unstable; urgency=medium  
 
@@ -11,14 +11,14 @@ pg-semver (0.20.2-1) unstable; urgency=medium
     version instead of the extension version. Thanks again to
     @ninjaslikecheese for the report (#33).
 
- -- David E. Wheeler <david@justatheory.com>  Fri, 19 Oct 2018 02:05:11 +0200
+ -- David E. Wheeler <david@justatheory.com>  Fri, 19 Oct 2018 02:05:11 +0000
 
 pg-semver (0.20.1-1) unstable; urgency=medium  
 
   * Properly incremented version to v0.20.0 in the spec file and docs.
     Thanks to @ninjaslikecheese for the report (#32).
 
- -- David E. Wheeler <david@justatheory.com>  Thu, 18 Oct 2018 00:30:04 +0200
+ -- David E. Wheeler <david@justatheory.com>  Thu, 18 Oct 2018 00:30:04 +0000
 
 pg-semver (0.20.0-1) unstable; urgency=medium  
 
@@ -29,21 +29,21 @@ pg-semver (0.20.0-1) unstable; urgency=medium
   * Fixed the `Makefile` so it properly installs `semver.sql`. Thanks to
     Matej Marue report (Issue #31).
 
- -- David E. Wheeler <david@justatheory.com>  Wed, 17 Oct 2018 12:59:22 +0200
+ -- David E. Wheeler <david@justatheory.com>  Wed, 17 Oct 2018 12:59:22 +0000
 
 pg-semver (0.17.0-1) unstable; urgency=medium  
 
   * Fixed potential memory leak in is_semver function. Thanks to
     Arun Tejasvi Chaganty (Issue #29).
 
- -- David E. Wheeler <david@justatheory.com>  Sun, 07 May 2017 07:15:25 +0200
+ -- David E. Wheeler <david@justatheory.com>  Sun, 07 May 2017 07:15:25 +0000
 
 pg-semver (0.16.0-1) unstable; urgency=medium  
 
   * Added `get_semver_*` accessor functions to retrieve the individual
     parts of a semver, thanks to Geoff Montee (PR #27).
 
- -- David E. Wheeler <david@justatheory.com>  Sun, 04 Dec 2016 00:51:19 +0100
+ -- David E. Wheeler <david@justatheory.com>  Sun, 04 Dec 2016 00:51:19 +0000
 
 pg-semver (0.15.0-1) unstable; urgency=medium  
 
@@ -53,7 +53,7 @@ pg-semver (0.15.0-1) unstable; urgency=medium
     2.0.0 section 11. Thanks to Sergey Kozlov for the report (Issue #23).
   * Added Xavier Caron and Tom Davis as maintainers.
 
- -- David E. Wheeler <david@justatheory.com>  Fri, 28 Oct 2016 03:38:59 +0200
+ -- David E. Wheeler <david@justatheory.com>  Fri, 28 Oct 2016 03:38:59 +0000
 
 pg-semver (0.14.0-1) unstable; urgency=medium  
 
@@ -61,7 +61,7 @@ pg-semver (0.14.0-1) unstable; urgency=medium
     evidently I forgot to do for that release. Thanks to Stanislav Lorenc
     for the report (Issue #21).
 
- -- David E. Wheeler <david@justatheory.com>  Thu, 11 Aug 2016 05:38:27 +0200
+ -- David E. Wheeler <david@justatheory.com>  Thu, 11 Aug 2016 05:38:27 +0000
 
 pg-semver (0.13.0-1) unstable; urgency=medium  
 
@@ -69,7 +69,7 @@ pg-semver (0.13.0-1) unstable; urgency=medium
     a semver. Thanks to @TerraTech for the report (Issue #19) and Tom
     Davis for the fix (PR #20).
 
- -- David E. Wheeler <david@justatheory.com>  Sat, 30 Jul 2016 21:06:15 +0200
+ -- David E. Wheeler <david@justatheory.com>  Sat, 30 Jul 2016 21:06:15 +0000
 
 pg-semver (0.12.0-1) unstable; urgency=medium  
 
@@ -77,7 +77,7 @@ pg-semver (0.12.0-1) unstable; urgency=medium
     10, were not properly recognized as semvers. Thanks to Xavier Caron
     for the fix (with tests!) (PR #17).
 
- -- David E. Wheeler <david@justatheory.com>  Sat, 11 Jun 2016 06:00:19 +0200
+ -- David E. Wheeler <david@justatheory.com>  Sat, 11 Jun 2016 06:00:19 +0000
 
 pg-semver (0.11.0-1) unstable; urgency=medium  
 
@@ -87,7 +87,7 @@ pg-semver (0.11.0-1) unstable; urgency=medium
     invalid. Thanks to @JeremySTX for the report (Issue #15) and Tom Davis
     for the fix (PR #16).
 
- -- David E. Wheeler <david@justatheory.com>  Mon, 23 May 2016 20:29:49 +0200
+ -- David E. Wheeler <david@justatheory.com>  Mon, 23 May 2016 20:29:49 +0000
 
 pg-semver (0.10.0-1) unstable; urgency=medium  
 
@@ -101,7 +101,7 @@ pg-semver (0.10.0-1) unstable; urgency=medium
     `to_semver()` to convert it to X.Y.Z-pre", or specify "X.Y.Z-pre"
     directly.
 
- -- David E. Wheeler <david@justatheory.com>  Thu, 12 May 2016 00:28:03 +0200
+ -- David E. Wheeler <david@justatheory.com>  Thu, 12 May 2016 00:28:03 +0000
 
 pg-semver (0.5.0-1) unstable; urgency=medium   
 
@@ -117,7 +117,7 @@ pg-semver (0.5.0-1) unstable; urgency=medium
   * Added `LICENSE` file to simplify packaging, thanks to Richard Marko,
     who is packaging semver for Fedora.
 
- -- David E. Wheeler <david@justatheory.com>  Sat, 06 Dec 2014 00:29:17 +0100
+ -- David E. Wheeler <david@justatheory.com>  Sat, 06 Dec 2014 00:29:17 +0000
 
 pg-semver (0.4.0-1) unstable; urgency=medium  
 
@@ -136,7 +136,7 @@ pg-semver (0.4.0-1) unstable; urgency=medium
   * Removed unnecessary calls to `PG_FREE_IF_COPY()`. Only really needed
     for toastable values, and semvers are not toastable.
 
- -- David E. Wheeler <david@justatheory.com>  Wed, 12 Jun 2013 06:48:33 +0200
+ -- David E. Wheeler <david@justatheory.com>  Wed, 12 Jun 2013 06:48:33 +0000
 
 pg-semver (0.3.0-1) unstable; urgency=medium  
 
@@ -145,7 +145,7 @@ pg-semver (0.3.0-1) unstable; urgency=medium
     version. This brings it in line with the final semver 1.0.0
     specification. Thanks to Pieter van de Bruggen for making it happen.
 
- -- David E. Wheeler <david@justatheory.com>  Tue, 20 Nov 2012 19:04:30 +0100
+ -- David E. Wheeler <david@justatheory.com>  Tue, 20 Nov 2012 19:04:30 +0000
 
 pg-semver (0.2.4-1) unstable; urgency=medium  
 
@@ -153,14 +153,14 @@ pg-semver (0.2.4-1) unstable; urgency=medium
     with missing or garbage characters. Thanks to Andrew "RhodiumToad"
     Gierth for help tracking down and fixing the issue.
 
- -- David E. Wheeler <david@justatheory.com>  Fri, 02 Nov 2012 22:32:30 +0100
+ -- David E. Wheeler <david@justatheory.com>  Fri, 02 Nov 2012 22:32:30 +0000
 
 pg-semver (0.2.3-1) unstable; urgency=medium 
 
   * Fixed the `Makefile` so that the documentation file should properly be
     found and installed by `PGXS`.
 
- -- David E. Wheeler <david@justatheory.com>  Fri, 11 Nov 2011 06:55:10 +0100
+ -- David E. Wheeler <david@justatheory.com>  Fri, 11 Nov 2011 06:55:10 +0000
 
 pg-semver (0.2.2-1) unstable; urgency=medium   
 
@@ -169,7 +169,7 @@ pg-semver (0.2.2-1) unstable; urgency=medium
     block.
   * Simplified the `CREATE EXTENSION` support in the `Makefile`.
 
- -- David E. Wheeler <david@justatheory.com>  Thu, 12 May 2011 19:01:41 +0200
+ -- David E. Wheeler <david@justatheory.com>  Thu, 12 May 2011 19:01:41 +0000
 
 pg-semver (0.2.1-1) unstable; urgency=medium 
 
@@ -189,7 +189,7 @@ pg-semver (0.2.1-1) unstable; urgency=medium
     hasn't been since 0.2.0.
   * Removed Unicode characters `psql` output in the documentation.
 
- -- David E. Wheeler <david@justatheory.com>  Wed, 20 Apr 2011 20:37:05 +0200
+ -- David E. Wheeler <david@justatheory.com>  Wed, 20 Apr 2011 20:37:05 +0000
 
 pg-semver (0.2.0-1) unstable; urgency=medium 
 
@@ -200,7 +200,7 @@ pg-semver (0.2.0-1) unstable; urgency=medium
   * Added casts from nuermic types.
   * Renamed `clean_semver()` to `to_semver()`.
 
- -- David E. Wheeler <david@justatheory.com>  Sat, 05 Feb 2011 19:32:49 +0100
+ -- David E. Wheeler <david@justatheory.com>  Sat, 05 Feb 2011 19:32:49 +0000
 
 pg-semver (0.1.0-1) unstable; urgency=medium
 
@@ -209,4 +209,4 @@ pg-semver (0.1.0-1) unstable; urgency=medium
   * Included in [PGXN Manager](https://github.com/theory/pgxn-manager).
   * Not otherwise released.
 
- -- David E. Wheeler <david@justatheory.com>  Sat, 07 Oct 2010 18:31:43 +0100
+ -- David E. Wheeler <david@justatheory.com>  Sat, 07 Oct 2010 18:31:43 +0000
