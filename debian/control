@@ -9,9 +9,9 @@ Homepage: https://gitlab.com/prusa3d/distro/pg-semver
 Vcs-Browser: https://gitlab.com/prusa3d/distro/pg-semver
 Vcs-Git: https://gitlab.com/prusa3d/distro/pg-semver.git
 
-Package: postgresql-11-semver
+Package: postgresql-12-semver
 Architecture: any
-Depends: postgresql-11, ${misc:Depends}, ${shlibs:Depends}
+Depends: postgresql-12, ${misc:Depends}, ${shlibs:Depends}
 Description: Semantic version data type
  This library contains a single PostgreSQL extension, a data type called
  "semver". It's an implementation of the version number format specified
